@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ModMetaData>
+    <!--Development began in November 2024-->
+    
+    <packageId>r2u-realistic_biomes</packageId>
+    <name>Realistic Biomes</name>
+    <author>r2u</author>
+    
+    <description>
+        Makes your planets biomes more similar to real-life climate zones.
+
+        Be sure to load after any other mods that add custom biomes!
+    </description>
+    
+    <supportedVersions>
+        <li>1.5</li>
+    </supportedVersions>
+    
+    <modDependencies>
+        <li>
+            <packageId>swablu.flooding</packageId>
+            <displayName>Dynamic Flooding</displayName>
+            <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3144491125</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+    
+    <loadAfter>
+        <li>swablu.flooding</li>
+    </loadAfter>
+</ModMetaData>

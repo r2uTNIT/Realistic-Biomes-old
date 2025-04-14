@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+    <BiomeDef>
+        <defName>RealisticBiomes-Tundra</defName>	
+		<label>Tundra</label>
+		<description>These mostly-frozen plains bear almost no trees and little vegetation. There are a few small animals interspersed with large herds of migratory grazers and their predators</description>
+		<workerClass>RealisticBiomes.Tundra</workerClass>
+
+		<animalDensity>2</animalDensity>
+		<plantDensity>0.2</plantDensity>
+		<settlementSelectionWeight>0.25</settlementSelectionWeight>
+		<texture>realistic_biomes/Tundra</texture>
+
+        <!--25% forageability-->
+		<forageability>0.25</forageability>
+
+		<movementDifficulty>1</movementDifficulty>
+		<foragedFood>RawBerries</foragedFood>
+		<wildPlantRegrowDays>20</wildPlantRegrowDays>
+
+        <soundsAmbient>
+            <li>Ambient_NightInsects_Standard</li>
+        </soundsAmbient>
+
+		<!--0.3 yearly disease frequency-->
+		<diseaseMtbDays>160</diseaseMtbDays>
+
+        <diseases>
+			<li>
+				<diseaseInc>Disease_Flu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_Plague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_OrganDecay</diseaseInc>
+				<commonality>10</commonality>
+			</li>
+		</diseases>
+
+        <!--Generates stony soil-->
+		<terrainsByFertility>
+			<li>
+                <terrain>Gravel</terrain>
+                <min>-999</min>
+                <max>999</max>
+            </li>
+		</terrainsByFertility>
+
+        <!--Randomly generates patches of marshy soil-->
+		<terrainPatchMakers>
+            <li>
+                <perlinFrequency>0.02</perlinFrequency>
+
+                <thresholds>
+                    <li>
+                        <terrain>MarshyTerrain</terrain>
+                        <min>0.8</min>
+                        <max>999</max>
+                    </li>
+                </thresholds>
+            </li>
+		</terrainPatchMakers>
+
+        <baseWeatherCommonalities>
+			<Clear>16</Clear>
+			<Fog>2</Fog>
+			<Rain>2</Rain>
+			<DryThunderstorm>2</DryThunderstorm>
+			<RainyThunderstorm>1</RainyThunderstorm>
+			<FoggyRain>1</FoggyRain>
+			<SnowGentle>4</SnowGentle>
+			<SnowHard>4</SnowHard>
+		</baseWeatherCommonalities>
+
+        <!--10.0 = common : 1.0 = uncommon : 0.1 = rare-->
+		<wildPlants>
+            <Plant_Astragalus>10.0</Plant_Astragalus>
+            <Plant_Berry>1.0</Plant_Berry>
+            <Plant_Bush>1.0</Plant_Bush>
+            <Plant_Dandelion>10.0</Plant_Dandelion>
+            <Plant_Grass>10.0</Plant_Grass>
+            <Plant_Moss>10.0</Plant_Moss>
+            <Plant_HealrootWild>1.0</Plant_HealrootWild>
+		</wildPlants>
+
+        <!--1.0 = common : 0.5 = uncommon : 0.15 = rare-->
+		<wildAnimals>
+            <Fox_Arctic>0.25</Fox_Arctic>
+            <Wolf_Arctic>0.25</Wolf_Arctic>
+            <Caribou>0.5</Caribou>
+            <Elk>0.15</Elk>
+            <Bear_Grizzly>0.075</Bear_Grizzly>
+            <Hare>1.0</Hare>
+            <Ibex>0.5</Ibex>
+            <Lynx>0.25</Lynx>
+            <Megasloth>0.15</Megasloth>
+            <Muffalo>0.5</Muffalo>
+            <Bear_Polar>0.075</Bear_Polar>
+            <Snowhare>1.0</Snowhare>
+            <Wolf_Timber>0.25</Wolf_Timber>
+            <Warg>0.075</Warg>
+		</wildAnimals>
+
+        <allowedPackAnimals>
+            <li>Muffalo</li>
+		</allowedPackAnimals>
+    </BiomeDef>
+
+    <BiomeDef>
+        <defName>RealisticBiomes-IceCapLand</defName>	
+		<label>Ice Sheet</label>
+		<description>Sheets of ice which can be kilometers thick. There is no soil for plants to grow in</description>
+		<workerClass>RealisticBiomes.IceCapLand</workerClass>
+
+		<animalDensity>1</animalDensity>
+		<plantDensity>0.2</plantDensity>
+		<settlementSelectionWeight>0.25</settlementSelectionWeight>
+		<texture>realistic_biomes/IceSheet</texture>
+        <allowRoads>false</allowRoads>
+        <allowRivers>false</allowRivers>
+
+        <!--0% forageability-->
+		<forageability>0.0</forageability>
+
+		<movementDifficulty>1</movementDifficulty>
+		<wildPlantRegrowDays>20</wildPlantRegrowDays>
+
+        <soundsAmbient>
+            <li>Ambient_Wind_Desolate</li>
+        </soundsAmbient>
+
+		<!--0.3 yearly disease frequency-->
+		<diseaseMtbDays>160</diseaseMtbDays>
+
+        <diseases>
+			<li>
+				<diseaseInc>Disease_Flu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_Plague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_OrganDecay</diseaseInc>
+				<commonality>10</commonality>
+			</li>
+		</diseases>
+
+        <!--Generates ice-->
+		<terrainsByFertility>
+			<li>
+                <terrain>Ice</terrain>
+                <min>-999</min>
+                <max>999</max>
+            </li>
+		</terrainsByFertility>
+
+        <baseWeatherCommonalities>
+			<Clear>16</Clear>
+			<Fog>2</Fog>
+			<Rain>2</Rain>
+			<DryThunderstorm>2</DryThunderstorm>
+			<RainyThunderstorm>1</RainyThunderstorm>
+			<FoggyRain>1</FoggyRain>
+			<SnowGentle>4</SnowGentle>
+			<SnowHard>4</SnowHard>
+		</baseWeatherCommonalities>
+
+        <!--1.0 = common : 0.5 = uncommon : 0.15 = rare-->
+		<wildAnimals>
+            <Fox_Arctic>0.25</Fox_Arctic>
+            <Wolf_Arctic>0.25</Wolf_Arctic>
+            <Lynx>0.25</Lynx>
+            <Megasloth>0.15</Megasloth>
+            <Muffalo>0.5</Muffalo>
+            <Bear_Polar>0.075</Bear_Polar>
+            <Snowhare>1.0</Snowhare>
+		</wildAnimals>
+
+        <allowedPackAnimals>
+            <li>Muffalo</li>
+		</allowedPackAnimals>
+    </BiomeDef>
+
+    
+    <BiomeDef>
+        <defName>RealisticBiomes-IceCapSea</defName>	
+		<label>Sea Ice</label>
+		<description>Permanent ice sheets floating on water. There is no soil for plants to grow, no minerals to mine, and almost no animal life</description>
+		<workerClass>RealisticBiomes.IceCapSea</workerClass>
+
+		<animalDensity>1</animalDensity>
+		<plantDensity>0.2</plantDensity>
+		<settlementSelectionWeight>0.1</settlementSelectionWeight>
+		<texture>realistic_biomes/SeaIce</texture>
+        <allowRoads>false</allowRoads>
+        <allowRivers>false</allowRivers>
+
+        <!--0% forageability-->
+		<forageability>0.0</forageability>
+
+		<movementDifficulty>1</movementDifficulty>
+		<wildPlantRegrowDays>20</wildPlantRegrowDays>
+
+        <soundsAmbient>
+            <li>Ambient_Wind_Desolate</li>
+        </soundsAmbient>
+
+		<!--0.3 yearly disease frequency-->
+		<diseaseMtbDays>160</diseaseMtbDays>
+
+        <diseases>
+			<li>
+				<diseaseInc>Disease_Flu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_Plague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_OrganDecay</diseaseInc>
+				<commonality>10</commonality>
+			</li>
+		</diseases>
+
+        <!--Generates ice-->
+		<terrainsByFertility>
+			<li>
+                <terrain>Ice</terrain>
+                <min>-999</min>
+                <max>999</max>
+            </li>
+		</terrainsByFertility>
+
+        <baseWeatherCommonalities>
+			<Clear>16</Clear>
+			<Fog>2</Fog>
+			<Rain>2</Rain>
+			<DryThunderstorm>2</DryThunderstorm>
+			<RainyThunderstorm>1</RainyThunderstorm>
+			<FoggyRain>1</FoggyRain>
+			<SnowGentle>4</SnowGentle>
+			<SnowHard>4</SnowHard>
+		</baseWeatherCommonalities>
+
+        <!--1.0 = common : 0.5 = uncommon : 0.15 = rare-->
+		<wildAnimals>
+            <Fox_Arctic>0.25</Fox_Arctic>
+            <Wolf_Arctic>0.25</Wolf_Arctic>
+            <Muffalo>0.5</Muffalo>
+            <Bear_Polar>0.075</Bear_Polar>
+            <Snowhare>1.0</Snowhare>
+		</wildAnimals>
+
+        <allowedPackAnimals>
+            <li>Muffalo</li>
+		</allowedPackAnimals>
+    </BiomeDef>
+</Defs>

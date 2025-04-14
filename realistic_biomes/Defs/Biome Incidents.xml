@@ -1,0 +1,63 @@
+<Defs>
+    <IncidentDef>
+        <defName>realistic_biomes-HerdMigration</defName>
+        <label>herd migration</label>
+        <category>Misc</category>
+        <targetTags>
+          <li>Map_PlayerHome</li>
+        </targetTags>
+        <allowedBiomes>
+            <li>RealisticBiomes-ColdSteppe</li>
+            <li>RealisticBiomes-ColdDesert</li>
+            <li>RealisticBiomes-HotDesert</li>
+            <li>RealisticBiomes-HotSteppe</li>
+            <li>RealisticBiomes-Tundra</li>
+            <li>RealisticBiomes-IceCapLand</li>
+        </allowedBiomes>
+        <workerClass>IncidentWorker_HerdMigration</workerClass>
+        <baseChance>1.0</baseChance>
+        <letterLabel>Animal migration: {0}</letterLabel>
+        <letterText>A group of {0} is passing through the area.\n\nThey won't attack unless provoked.</letterText>
+        <letterDef>NeutralEvent</letterDef>
+    </IncidentDef>
+
+    <IncidentDef>
+        <defName>realistic_biomes-AmbrosiaSprout</defName>
+        <label>ambrosia sprout</label>
+        <category>Misc</category>
+        <targetTags>
+          <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>IncidentWorker_AmbrosiaSprout</workerClass>
+        <baseChance>1.0</baseChance>
+        <letterLabel>Ambrosia sprout</letterLabel>
+        <letterText>A grove of the mysterious ambrosia bush has sprouted nearby! If you wait for the plants to grow, you'll be able to harvest the delicious, pleasurable, and slightly addictive fruit.</letterText>
+        <letterDef>PositiveEvent</letterDef>
+        <allowedBiomes>
+			<li>RealisticBiomes-TropicalWet</li>
+            <li>RealisticBiomes-TropicalWetRainforest</li>
+            <li>RealisticBiomes-TropicalWetSwamp</li>
+            <li>RealisticBiomes-HumidSubtropical</li>
+            <li>RealisticBiomes-HumidSubtropicalSwamp</li>
+            <li>RealisticBiomes-Continental</li>
+            <li>RealisticBiomes-ContinentalSwamp</li>
+            <li>RealisticBiomes-Subarctic</li>
+            <li>RealisticBiomes-SubarcticSwamp</li>
+        </allowedBiomes>
+    </IncidentDef>
+
+    <IncidentDef>
+        <defName>realistic_biomes-Alphabeavers</defName>
+        <label>alphabeavers</label>
+        <category>Misc</category>
+        <allowedBiomes>
+            <li>RealisticBiomes-HotSteppe</li>
+        </allowedBiomes>
+        <targetTags>
+          <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>IncidentWorker_Alphabeavers</workerClass>
+        <baseChance>0.5</baseChance>
+        <minRefireDays>30</minRefireDays>
+    </IncidentDef>
+</Defs>

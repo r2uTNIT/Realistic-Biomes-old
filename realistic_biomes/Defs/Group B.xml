@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+	<BiomeDef>
+		<defName>RealisticBiomes-HotDesert</defName>	
+		<label>Hot Desert</label>
+		<description>An extremely hot, dry area, devoid of almost all life</description>
+		<workerClass>RealisticBiomes.HotDesert</workerClass>
+
+		<animalDensity>1</animalDensity>
+		<plantDensity>0.2</plantDensity>
+		<settlementSelectionWeight>0.25</settlementSelectionWeight>
+		<texture>realistic_biomes/HotDesert</texture>
+
+		<!--25% forageability-->
+		<forageability>0.25</forageability>
+
+		<movementDifficulty>1</movementDifficulty>
+		<foragedFood>RawAgave</foragedFood>
+		<wildPlantRegrowDays>20</wildPlantRegrowDays>
+
+		<!--0.3 yearly disease frequency-->
+		<diseaseMtbDays>160</diseaseMtbDays>
+
+		<diseases>
+			<li>
+				<diseaseInc>Disease_Flu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_Plague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_OrganDecay</diseaseInc>
+				<commonality>10</commonality>
+			</li>
+		</diseases>
+
+		<!--Generates sand-->
+		<terrainsByFertility>
+			<li>
+				<terrain>Sand</terrain>
+				<min>-999</min>
+				<max>999</max>
+			</li>
+		</terrainsByFertility>
+
+		<!--Randomly generates patches of soft sand-->
+		<terrainPatchMakers>
+			<li>
+				<perlinFrequency>0.02</perlinFrequency>
+
+				<thresholds>
+					<li>
+						<terrain>SoftSand</terrain>
+						<min>0.8</min>
+						<max>999</max>
+					</li>
+				</thresholds>
+			</li>
+		</terrainPatchMakers>
+
+		<baseWeatherCommonalities>
+			<Clear>16</Clear>
+			<Fog>2</Fog>
+			<Rain>2</Rain>
+			<DryThunderstorm>2</DryThunderstorm>
+			<RainyThunderstorm>1</RainyThunderstorm>
+			<FoggyRain>1</FoggyRain>
+			<SnowGentle>4</SnowGentle>
+			<SnowHard>4</SnowHard>
+		</baseWeatherCommonalities>
+
+		<!--10.0 = common : 1.0 = uncommon : 0.1 = rare-->
+		<wildPlants>
+			<Plant_Agave>1.0</Plant_Agave>
+			<Plant_Grass>10.0</Plant_Grass>
+			<Plant_SaguaroCactus>1.0</Plant_SaguaroCactus>
+		</wildPlants>
+
+		<!--1.0 = common : 0.5 = uncommon : 0.15 = rare-->
+		<wildAnimals>
+			<Donkey>0.5</Donkey>
+			<Dromedary>0.5</Dromedary>
+			<Fox_Fennec>0.25</Fox_Fennec>
+			<GuineaPig>0.15</GuineaPig>
+			<Iguana>1.0</Iguana>
+		</wildAnimals>
+
+		<allowedPackAnimals>
+			<li>Dromedary</li>
+		</allowedPackAnimals>
+	</BiomeDef>
+
+    <BiomeDef>
+        <defName>RealisticBiomes-ColdDesert</defName>
+        <label>Cold Desert</label>
+		<description>A very dry area which supports little life</description>
+		<workerClass>RealisticBiomes.ColdDesert</workerClass>
+
+		<animalDensity>2</animalDensity>
+		<plantDensity>0.2</plantDensity>
+		<settlementSelectionWeight>0.25</settlementSelectionWeight>
+		<texture>realistic_biomes/ColdDesert</texture>
+
+        <!--75% forageability-->
+		<forageability>0.75</forageability>
+
+		<movementDifficulty>1</movementDifficulty>
+		<foragedFood>RawAgave</foragedFood>
+		<wildPlantRegrowDays>20</wildPlantRegrowDays>
+
+		<!--0.3 yearly disease frequency-->
+		<diseaseMtbDays>160</diseaseMtbDays>
+
+        <diseases>
+			<li>
+				<diseaseInc>Disease_Flu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_Plague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_OrganDecay</diseaseInc>
+				<commonality>10</commonality>
+			</li>
+		</diseases>
+
+        <!--Generates stony soil-->
+		<terrainsByFertility>
+			<li>
+				<terrain>Gravel</terrain>
+				<min>-999</min>
+				<max>999</max>
+			</li>
+		</terrainsByFertility>
+
+        <!--Randomly generates patches of marshy soil-->
+		<terrainPatchMakers>
+			<li>
+				<perlinFrequency>0.02</perlinFrequency>
+
+				<thresholds>
+					<li>
+						<terrain>MarshyTerrain</terrain>
+						<min>0.8</min>
+						<max>999</max>
+					</li>
+				</thresholds>
+			</li>
+		</terrainPatchMakers>
+
+        <baseWeatherCommonalities>
+			<Clear>16</Clear>
+			<Fog>2</Fog>
+			<Rain>2</Rain>
+			<DryThunderstorm>2</DryThunderstorm>
+			<RainyThunderstorm>1</RainyThunderstorm>
+			<FoggyRain>1</FoggyRain>
+			<SnowGentle>4</SnowGentle>
+			<SnowHard>4</SnowHard>
+		</baseWeatherCommonalities>
+
+        <!--10.0 = common : 1.0 = uncommon : 0.1 = rare-->
+		<wildPlants>
+			<Plant_Agave>1.0</Plant_Agave>
+			<Plant_Bush>1.0</Plant_Bush>
+            <Plant_Dandelion>10.0</Plant_Dandelion>
+            <Plant_Grass>10.0</Plant_Grass>
+            <Plant_PincushionCactus>1.0</Plant_PincushionCactus>
+            <Plant_SaguaroCactus>1.0</Plant_SaguaroCactus>
+		</wildPlants>
+
+		<!--1.0 = common : 0.5 = uncommon : 0.15 = rare-->
+		<wildAnimals>
+            <Boomalope>0.15</Boomalope>
+            <Cougar>0.25</Cougar>
+			<Donkey>0.5</Donkey>
+			<Dromedary>0.5</Dromedary>
+            <Emu>0.5</Emu>
+			<Fox_Fennec>0.25</Fox_Fennec>
+            <Gazelle>0.5</Gazelle>
+			<GuineaPig>0.15</GuineaPig>
+			<Iguana>1.0</Iguana>
+            <Ostrich>0.5</Ostrich>
+		</wildAnimals>
+
+		<allowedPackAnimals>
+			<li>Horse</li>
+		</allowedPackAnimals>
+    </BiomeDef>
+
+    <BiomeDef>
+        <defName>RealisticBiomes-HotSteppe</defName>	
+		<label>Savanna</label>
+		<description>A dry region characterized by vast plains interspersed with trees and shrubs</description>
+		<workerClass>RealisticBiomes.HotSteppe</workerClass>
+
+		<animalDensity>4</animalDensity>
+		<plantDensity>0.6</plantDensity>
+		<settlementSelectionWeight>0.75</settlementSelectionWeight>
+		<texture>realistic_biomes/HotSteppe</texture>
+
+        <!--100% forageability-->
+		<forageability>1.0</forageability>
+
+		<movementDifficulty>2</movementDifficulty>
+		<foragedFood>RawAgave</foragedFood>
+		<wildPlantRegrowDays>20</wildPlantRegrowDays>
+
+        <soundsAmbient>
+            <li>Ambient_NightInsects_Standard</li>
+        </soundsAmbient>
+
+		<!--0.7 yearly disease frequency-->
+		<diseaseMtbDays>85</diseaseMtbDays>
+
+        <diseases>
+			<li>
+				<diseaseInc>Disease_Flu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_Plague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_OrganDecay</diseaseInc>
+				<commonality>10</commonality>
+			</li>
+		</diseases>
+
+        <!--Generates normal soil-->
+		<terrainsByFertility>
+			<li>
+				<terrain>Soil</terrain>
+				<min>-999</min>
+				<max>999</max>
+			</li>
+		</terrainsByFertility>
+
+        <!--Randomly generates patches of marshy soil & marsh-->
+		<terrainPatchMakers>
+			<li>
+				<perlinFrequency>0.02</perlinFrequency>
+
+				<thresholds>
+					<li>
+						<terrain>MarshyTerrain</terrain>
+						<min>0.8</min>
+						<max>999</max>
+					</li>
+				</thresholds>
+			</li>
+
+            <li>
+                <perlinFrequency>0.02</perlinFrequency>
+
+                <thresholds>
+                    <li>
+                        <terrain>Marsh</terrain>
+                        <min>0.8</min>
+                        <max>999</max>
+                    </li>
+                </thresholds>
+            </li>
+		</terrainPatchMakers>
+
+        <baseWeatherCommonalities>
+			<Clear>16</Clear>
+			<Fog>2</Fog>
+			<Rain>2</Rain>
+			<DryThunderstorm>2</DryThunderstorm>
+			<RainyThunderstorm>1</RainyThunderstorm>
+			<FoggyRain>1</FoggyRain>
+			<SnowGentle>4</SnowGentle>
+			<SnowHard>4</SnowHard>
+		</baseWeatherCommonalities>
+
+        <!--10.0 = common : 1.0 = uncommon : 0.1 = rare-->
+		<wildPlants>
+            <Plant_Agave>1.0</Plant_Agave>
+            <Plant_Bush>1.0</Plant_Bush>
+            <Plant_Dandelion>10.0</Plant_Dandelion>
+            <Plant_TreeDrago>1.0</Plant_TreeDrago>
+            <Plant_Grass>10.0</Plant_Grass>
+		</wildPlants>
+
+        <!--1.0 = common : 0.5 = uncommon : 0.15 = rare-->
+		<wildAnimals>
+            <Bison>0.5</Bison>
+            <Boomalope>0.15</Boomalope>
+            <Boomrat>1.0</Boomrat>
+            <Donkey>0.5</Donkey>
+            <Dromedary>0.5</Dromedary>
+            <Elephant>0.5</Elephant>
+            <Emu>0.5</Emu>
+            <Fox_Fennec>0.25</Fox_Fennec>
+            <Gazelle>0.5</Gazelle>
+            <GuineaPig>0.15</GuineaPig>
+            <Iguana>1.0</Iguana>
+            <Ostrich>0.5</Ostrich>
+            <Rat>1.0</Rat>
+            <Rhinoceros>0.15</Rhinoceros>
+		</wildAnimals>
+
+		<allowedPackAnimals>
+            <li>Dromedary</li>
+		</allowedPackAnimals>
+    </BiomeDef>
+
+    <BiomeDef>
+        <defName>RealisticBiomes-ColdSteppe</defName>
+        <label>Steppe</label>
+		<description>A dry region, but not dry enough to become a true desert</description>
+		<workerClass>RealisticBiomes.ColdSteppe</workerClass>
+
+		<animalDensity>4</animalDensity>
+		<plantDensity>0.6</plantDensity>
+		<settlementSelectionWeight>0.75</settlementSelectionWeight>
+		<texture>realistic_biomes/ColdSteppe</texture>
+
+        <!--100% forageability-->
+		<forageability>1.0</forageability>
+
+		<movementDifficulty>1</movementDifficulty>
+		<foragedFood>RawAgave</foragedFood>
+		<wildPlantRegrowDays>20</wildPlantRegrowDays>
+
+        <soundsAmbient>
+            <li>Ambient_NightInsects_Standard</li>
+        </soundsAmbient>
+
+		<!--0.7 yearly disease frequency-->
+		<diseaseMtbDays>85</diseaseMtbDays>
+
+        <diseases>
+			<li>
+				<diseaseInc>Disease_Flu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_Plague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_OrganDecay</diseaseInc>
+				<commonality>10</commonality>
+			</li>
+		</diseases>
+
+        <!--Generates normal soil-->
+		<terrainsByFertility>
+			<li>
+				<terrain>Soil</terrain>
+				<min>-999</min>
+				<max>999</max>
+			</li>
+		</terrainsByFertility>
+
+        <!--Randomly generates patches of marshy soil & marsh-->
+		<terrainPatchMakers>
+			<li>
+				<perlinFrequency>0.02</perlinFrequency>
+
+				<thresholds>
+					<li>
+						<terrain>MarshyTerrain</terrain>
+						<min>0.8</min>
+						<max>999</max>
+					</li>
+				</thresholds>
+			</li>
+
+            <li>
+                <perlinFrequency>0.02</perlinFrequency>
+
+                <thresholds>
+                    <li>
+                        <terrain>Marsh</terrain>
+                        <min>0.8</min>
+                        <max>999</max>
+                    </li>
+                </thresholds>
+            </li>
+		</terrainPatchMakers>
+
+        <baseWeatherCommonalities>
+			<Clear>16</Clear>
+			<Fog>2</Fog>
+			<Rain>2</Rain>
+			<DryThunderstorm>2</DryThunderstorm>
+			<RainyThunderstorm>1</RainyThunderstorm>
+			<FoggyRain>1</FoggyRain>
+			<SnowGentle>4</SnowGentle>
+			<SnowHard>4</SnowHard>
+		</baseWeatherCommonalities>
+
+        <!--10.0 = common : 1.0 = uncommon : 0.1 = rare-->
+		<wildPlants>
+            <Plant_Agave>1.0</Plant_Agave>
+            <Plant_Bush>1.0</Plant_Bush>
+            <Plant_Dandelion>10.0</Plant_Dandelion>
+            <Plant_Grass>10.0</Plant_Grass>
+		</wildPlants>
+
+        <!--1.0 = common : 0.5 = uncommon : 0.15 = rare-->
+		<wildAnimals>
+            <Cougar>0.25</Cougar>
+            <GuineaPig>0.15</GuineaPig>
+            <Hare>1.0</Hare>
+            <Horse>0.5</Horse>
+            <Megasloth>0.15</Megasloth>
+            <Rat>1.0</Rat>
+            <Bison>0.5</Bison>
+            <Boomrat>1.0</Boomrat>
+            <Emu>0.5</Emu>
+            <Gazelle>0.5</Gazelle>
+            <Ostrich>0.5</Ostrich>
+		</wildAnimals>
+
+		<allowedPackAnimals>
+            <li>Horse</li>
+		</allowedPackAnimals>
+    </BiomeDef>
+</Defs>

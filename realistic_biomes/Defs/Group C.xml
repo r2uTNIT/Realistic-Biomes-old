@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+    <BiomeDef>
+        <defName>RealisticBiomes-HumidSubtropical</defName>	
+		<label>Subtropical Forest</label>
+		<description>Mixed forests of deciduous/evergreen trees interspersed with fertile clearings</description>
+		<workerClass>RealisticBiomes.HumidSubtropical</workerClass>
+
+		<animalDensity>4</animalDensity>
+		<plantDensity>0.6</plantDensity>
+		<settlementSelectionWeight>1</settlementSelectionWeight>
+		<texture>realistic_biomes/SubtropicalForest</texture>
+
+        <!--75% forageability-->
+		<forageability>0.75</forageability>
+
+		<movementDifficulty>3</movementDifficulty>
+		<foragedFood>RawBerries</foragedFood>
+		<wildPlantRegrowDays>20</wildPlantRegrowDays>
+
+        <soundsAmbient>
+            <li>Ambient_NightInsects_Standard</li>
+        </soundsAmbient>
+
+		<!--1.5 yearly disease frequency-->
+		<diseaseMtbDays>40</diseaseMtbDays>
+
+        <diseases>
+			<li>
+				<diseaseInc>Disease_Malaria</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_SleepingSickness</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_Flu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_Plague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_OrganDecay</diseaseInc>
+				<commonality>10</commonality>
+			</li>
+		</diseases>
+
+        <!--Generates normal soil & rich soil-->
+		<terrainsByFertility>
+			<li>
+				<terrain>Soil</terrain>
+				<min>-999</min>
+				<max>0.8</max>
+			</li>
+
+            <li>
+                <terrain>SoilRich</terrain>
+                <min>0.8</min>
+                <max>999</max>
+            </li>
+		</terrainsByFertility>
+
+        <!--Randomly generates patches of marshy soil, marsh, & shallow water-->
+		<terrainPatchMakers>
+			<li>
+				<perlinFrequency>0.02</perlinFrequency>
+
+				<thresholds>
+					<li>
+						<terrain>MarshyTerrain</terrain>
+						<min>0.8</min>
+						<max>999</max>
+					</li>
+				</thresholds>
+			</li>
+
+            <li>
+                <perlinFrequency>0.02</perlinFrequency>
+
+                <thresholds>
+                    <li>
+                        <terrain>Marsh</terrain>
+                        <min>0.8</min>
+                        <max>999</max>
+                    </li>
+                </thresholds>
+            </li>
+
+            <li>
+                <perlinFrequency>0.02</perlinFrequency>
+
+                <thresholds>
+                    <li>
+                        <terrain>Marsh</terrain>
+                        <min>0.8</min>
+                        <max>0.9</max>
+                    </li>
+
+                    <li>
+                        <terrain>WaterShallow</terrain>
+                        <min>0.9</min>
+                        <max>999</max>
+                    </li>
+                </thresholds>
+            </li>
+		</terrainPatchMakers>
+
+        <baseWeatherCommonalities>
+			<Clear>16</Clear>
+			<Fog>2</Fog>
+			<Rain>2</Rain>
+			<DryThunderstorm>1</DryThunderstorm>
+			<RainyThunderstorm>2</RainyThunderstorm>
+			<FoggyRain>1</FoggyRain>
+			<SnowGentle>4</SnowGentle>
+			<SnowHard>4</SnowHard>
+		</baseWeatherCommonalities>
+
+        <!--10.0 = common : 1.0 = uncommon : 0.1 = rare-->
+		<wildPlants>
+            <Plant_Berry>1.0</Plant_Berry>
+            <Plant_Bush>1.0</Plant_Bush>
+            <Plant_Grass>0.1</Plant_Grass>
+            <Plant_TreeOak>10.0</Plant_TreeOak>
+            <Plant_TallGrass>0.1</Plant_TallGrass>
+		</wildPlants>
+
+        <!--1.0 = common : 0.5 = uncommon : 0.15 = rare-->
+		<wildAnimals>
+            <Alpaca>0.5</Alpaca>
+            <Boomrat>1.0</Boomrat>
+            <Donkey>0.5</Donkey>
+            <Gazelle>0.5</Gazelle>
+            <GuineaPig>0.15</GuineaPig>
+            <Rat>1.0</Rat>
+            <Tortoise>0.5</Tortoise>
+            <WildBoar>0.5</WildBoar>
+            <Bear_Grizzly>0.075</Bear_Grizzly>
+		</wildAnimals>
+
+		<allowedPackAnimals>
+            <li>Bison</li>
+		</allowedPackAnimals>
+    </BiomeDef>
+
+    <BiomeDef>
+        <defName>RealisticBiomes-HumidSubtropicalSwamp</defName>
+        <label>Subtropical Swamp</label>
+		<description>Wetlands choked with vegetation and disease. Dense overgrowth makes it hard to move around</description>
+		<workerClass>RealisticBiomes.HumidSubtropicalSwamp</workerClass>
+
+		<animalDensity>4</animalDensity>
+		<plantDensity>0.6</plantDensity>
+		<settlementSelectionWeight>0.25</settlementSelectionWeight>
+		<texture>realistic_biomes/SubtropicalSwamp</texture>
+
+        <!--25% forageability-->
+		<forageability>0.25</forageability>
+
+		<movementDifficulty>4</movementDifficulty>
+		<foragedFood>RawBerries</foragedFood>
+		<wildPlantRegrowDays>20</wildPlantRegrowDays>
+
+        <soundsAmbient>
+            <li>Ambient_NightInsects_Standard</li>
+        </soundsAmbient>
+
+		<!--2.3 yearly disease frequency-->
+		<diseaseMtbDays>26</diseaseMtbDays>
+
+		<isExtremeBiome>true</isExtremeBiome>
+
+        <diseases>
+			<li>
+				<diseaseInc>Disease_Malaria</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_SleepingSickness</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_Flu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_Plague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			
+			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+
+			<li>
+				<diseaseInc>Disease_OrganDecay</diseaseInc>
+				<commonality>10</commonality>
+			</li>
+		</diseases>
+
+        <!--Generates marshy soil & rich soil-->
+		<terrainsByFertility>
+			<li>
+				<terrain>MarshyTerrain</terrain>
+				<min>-999</min>
+				<max>0.8</max>
+			</li>
+
+            <li>
+                <terrain>SoilRich</terrain>
+                <min>0.8</min>
+                <max>999</max>
+            </li>
+		</terrainsByFertility>
+
+        <!--Randomly generates patches of marsh, shallow water, & deep water-->
+		<terrainPatchMakers>
+			<li>
+				<perlinFrequency>0.02</perlinFrequency>
+
+				<thresholds>
+					<li>
+						<terrain>Marsh</terrain>
+						<min>0.8</min>
+						<max>999</max>
+					</li>
+				</thresholds>
+			</li>
+
+            <li>
+                <perlinFrequency>0.02</perlinFrequency>
+
+                <thresholds>
+                    <li>
+                        <terrain>Marsh</terrain>
+                        <min>0.8</min>
+                        <max>0.9</max>
+                    </li>
+
+                    <li>
+                        <terrain>WaterShallow</terrain>
+                        <min>0.9</min>
+                        <max>999</max>
+                    </li>
+                </thresholds>
+            </li>
+
+            <li>
+                <perlinFrequency>0.02</perlinFrequency>
+
+                <thresholds>
+                    <li>
+                        <terrain>Marsh</terrain>
+                        <min>0.8</min>
+                        <max>0.9</max>
+                    </li>
+
+                    <li>
+                        <terrain>WaterShallow</terrain>
+                        <min>0.9</min>
+                        <max>0.95</max>
+                    </li>
+
+                    <li>
+                        <terrain>WaterDeep</terrain>
+                        <min>0.95</min>
+                        <max>999</max>
+                    </li>
+                </thresholds>
+            </li>
+		</terrainPatchMakers>
+
+        <baseWeatherCommonalities>
+			<Clear>16</Clear>
+			<Fog>2</Fog>
+			<Rain>2</Rain>
+			<DryThunderstorm>1</DryThunderstorm>
+			<RainyThunderstorm>2</RainyThunderstorm>
+			<FoggyRain>1</FoggyRain>
+			<SnowGentle>4</SnowGentle>
+			<SnowHard>4</SnowHard>
+		</baseWeatherCommonalities>
+
+        <!--10.0 = common : 1.0 = uncommon : 0.1 = rare-->
+		<wildPlants>
+            <Plant_Berry>1.0</Plant_Berry>
+            <Plant_Bush>1.0</Plant_Bush>
+            <Plant_Chokevine>1.0</Plant_Chokevine>
+            <Plant_TreeCypress>10.0</Plant_TreeCypress>
+            <Plant_TreeMaple>10.0</Plant_TreeMaple>
+            <Plant_TallGrass>0.1</Plant_TallGrass>
+            <Plant_TreeWillow>10.0</Plant_TreeWillow>
+		</wildPlants>
+
+        <!--1.0 = common : 0.5 = uncommon : 0.15 = rare-->
+		<wildAnimals>
+            <Alpaca>0.5</Alpaca>
+            <Boomrat>1.0</Boomrat>
+            <Cougar>0.25</Cougar>
+            <GuineaPig>0.15</GuineaPig>
+            <Hare>1.0</Hare>
+            <Rat>1.0</Rat>
+            <Tortoise>0.5</Tortoise>
+            <WildBoar>0.5</WildBoar>
+		</wildAnimals>
+
+        <allowedPackAnimals>
+            <li>Bison</li>
+		</allowedPackAnimals>
+    </BiomeDef>
+</Defs>

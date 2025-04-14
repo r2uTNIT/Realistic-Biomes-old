@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+    <FeatureDef>
+        <defName>Swamp</defName>
+        <workerClass>FeatureWorker_Biome</workerClass>
+        <order>300</order>
+        <minSize>4</minSize>
+
+        <rootBiomes>
+            <li>RealisticBiomes-TropicalWetSwamp</li>
+            <li>RealisticBiomes-HumidSubtropicalSwamp</li>
+            <li>RealisticBiomes-ContinentalSwamp</li>
+            <li>RealisticBiomes-SubarcticSwamp</li>
+        </rootBiomes>
+
+        <nameMaker>NamerSwamp</nameMaker>
+    </FeatureDef>
+
+    <FeatureDef>
+    	<defName>GroupA</defName>
+    	<workerClass>FeatureWorker_Biome</workerClass>
+    	<order>400</order>
+        <minSize>4</minSize>
+
+    	<rootBiomes>
+      		<li>RealisticBiomes-TropicalWet</li>
+      		<li>RealisticBiomes-TropicalWetRainforest</li>
+    	</rootBiomes>
+
+    	<nameMaker>NamerTropicalRainforest</nameMaker>
+  	</FeatureDef>
+
+    <FeatureDef>
+        <defName>GroupBArid</defName>
+        <workerClass>FeatureWorker_Biome</workerClass>
+        <order>410</order>
+        <minSize>4</minSize>
+
+        <rootBiomes>
+            <li>RealisticBiomes-HotDesert</li>
+            <li>RealisticBiomes-ColdDesert</li>
+        </rootBiomes>
+
+        <nameMaker>NamerDesert</nameMaker>
+    </FeatureDef>
+
+    <FeatureDef>
+        <defName>GroupBSemiArid</defName>
+        <workerClass>FeatureWorker_Biome</workerClass>
+        <order>420</order>
+        <minSize>4</minSize>
+
+        <rootBiomes>
+            <li>RealisticBiomes-HotSteppe</li>
+            <li>RealisticBiomes-ColdSteppe</li>
+        </rootBiomes>
+
+        <nameMaker>NamerAridShrubland</nameMaker>
+    </FeatureDef>
+
+    <FeatureDef>
+        <defName>GroupC-GroupD</defName>
+        <workerClass>FeatureWorker_Biome</workerClass>
+        <order>430</order>
+        <minSize>4</minSize>
+
+        <rootBiomes>
+            <li>RealisticBiomes-HumidSubtropical</li>
+            <li>RealisticBiomes-Continental</li>
+        </rootBiomes>
+
+        <nameMaker>NamerForest</nameMaker>
+    </FeatureDef>
+
+    <FeatureDef>
+        <defName>GroupE</defName>
+        <workerClass>FeatureWorker_Biome</workerClass>
+        <order>440</order>
+        <minSize>4</minSize>
+
+        <rootBiomes>
+            <li>RealisticBiomes-Subarctic</li>
+        </rootBiomes>
+
+        <nameMaker>NamerBorealForest</nameMaker>
+    </FeatureDef>
+
+    <FeatureDef>
+        <defName>Tundra</defName>
+        <workerClass>FeatureWorker_Biome</workerClass>
+        <order>450</order>
+        <minSize>4</minSize>
+
+        <rootBiomes>
+            <li>RealisticBiomes-Tundra</li>
+        </rootBiomes>
+
+        <nameMaker>NamerTundra</nameMaker>
+    </FeatureDef>
+
+    <FeatureDef>
+        <defName>IceSheet</defName>
+        <workerClass>FeatureWorker_Biome</workerClass>
+        <order>460</order>
+        <minSize>4</minSize>
+
+        <rootBiomes>
+            <li>RealisticBiomes-IceCapLand</li>
+            <li>RealisticBiomes-IceCapSea</li>
+        </rootBiomes>
+
+        <nameMaker>NamerIceSheet</nameMaker>
+    </FeatureDef>
+</Defs>
